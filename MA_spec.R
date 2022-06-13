@@ -146,19 +146,11 @@ segments(x0=0,y0=0,y1=1,x1=0, col='red', lwd = 2,lty = 4)
 
 
 
-
-
-
-
-
-
-
-
-##################x=30
+#############x=25.8
 d2t <- loop(n,0.8,0.3,25.8,4)
-d2<-t(t(d2t)/abs(d2t[1,])) #Nødt til at trans for at divide row-wise
+d2<-t(t(d2t)/abs(d2t[1,])) #NÃ¸dt til at trans for at divide row-wise
 
-#Første t=0
+#FÃ¸rste t=0
 h0 <- hist(d2[1,], breaks=20, plot=FALSE)
 h0$counts=h0$counts/sum(h0$counts)
 plot(h0, xlab = 'Theta_0', main='')
